@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="assignment.css">
+    <script type="text/javascript" src="assignment.js"></script>
+</head>
+
+<body class="bg-light-grey">
+    <div id="userInfo" class="bg-white padding-xlarge width-75 select-seat margin-center">
+        <div class="text-align-center">
+            <h4>Movie Seat Reservation</h4>
+        </div>
+        <div class="padding-medium no-horizontal-padding box-sizing-box display-inline-block full-width">
+            <div class="width-50 f-left box-sizing-box text-align-right padding-small no-vertical-padding no-left-padding">
+                <span>Name<em>*</em> </span><input type="text" class="no-horizontal-border no-top-border" onchange="checkname()" id="username" />
+            </div>
+            <div class="width-50 f-left box-sizing-box">
+                <span>Seats to reserve<em>*</em> </span>
+                <select id="seatscount">
+          <option>Select seat</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+            </div>
+        </div>
+        <div class="error-message text-align-center" id="userErrorMessage"></div>
+        <div class="text-align-right padding-medium no-horizontal-padding">
+            <button type="button" class="button-type-1" id="startSelectingSeat" onclick="saveUserSeat()">Start Selecting</button>
+        </div>
+    </div>
+    <div id="theatreRoom" class="bg-white padding-xlarge width-75 select-seat margin-center" style="display: none;">
+        <div class="text-align-center">
+            <h4>Select Seats</h4>
+        </div>
+        <div class="padding-medium no-horizontal-padding box-sizing-box display-inline-block full-width">
+            <div class="box-sizing-box display-inline-block full-width seat-selection" id="seatAvailable"></div>
+        </div>
+        <div class="error-message text-align-center" id="seatErrorMessage"></div>
+        <div class="text-align-right padding-medium no-horizontal-padding">
+            <button type="button" class="button-type-1" id="startSelectingSeat" onclick="bookSeat()">Book</button>
+        </div>
+    </div>
+    <div id="ticketSelectedRoom" style="display: none;" class="bg-white padding-xlarge width-75 select-seat margin-center">
+        <div class="text-align-center">
+            <h4>Reserved Seats</h4>
+        </div>
+        <div class="padding-medium no-horizontal-padding box-sizing-box display-inline-block full-width" id="reservedSeats">
+        </div>
+    </div>
+</body>
+
+</html>
